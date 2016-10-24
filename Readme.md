@@ -1,11 +1,12 @@
 Romeeka says:
 =============
 
-Gusto 1201 16th St #350
+Address `Gusto 1201 16th St #350`
 
 * Students develop confidence in using map, reduce and filter on an Array in JS
 * Students understand the purpose of an index when enumerating
 * Students understand how to enumerate over the properties of an Object
+* curl / curl -i / jq . / pbcopy
 
 High Level Wishes:
 
@@ -21,3 +22,20 @@ It would be neat to teach this from the standpoint of working with API data -
 
 They were supposed to get [this](https://github.com/mdn/advanced-js-fundamentals-ck)
 lesson, but they went through it on their own and prob fucked around instead.
+
+
+Maybe options
+-------------
+
+* API
+  [x] - curl output into a file
+        then they can read it from the file (faster / doesn't look like DDOS)
+        then we can give them
+        filter github events and grab all the commits
+        https://api.github.com/users/JoshCheek/events/public
+  [ ] - Same as 1, but the data they're working with will come from a repo
+        that we set up for the tests
+  [ ] - Same as 1, but Romeeka will **react** to it ;)~
+* Test suite of functions (inputs / outputs) that require development
+  of these skills (Katrina style -- maybe even just translate a
+  subset of her work?)
