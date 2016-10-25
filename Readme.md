@@ -46,7 +46,7 @@ These are the potentially interesting methods:
 
 ["a", "b", "c"].join("-")  // what will this be?
 
-var ary = ["a", "b", "c"]
+let ary = ["a", "b", "c"]
 ary.pop()                  // what will this be?
 ary                        // what will this be?
 
@@ -71,7 +71,7 @@ ary = ["a", "b", "c", "d", "e"]
 ary.map((char) => char.toUpperCase()) // what will this be?
 ary.map((char) => char + char)        // what will this be?
 
-var chars = ""
+let chars = ""
 ["a", "b", "c", "d", "e"].forEach((char) => chars = chars + char)
 chars // what will this be?
 
@@ -79,15 +79,11 @@ chars = ""
 ["a", "b", "c", "d", "e"].forEach((char) => chars = char + chars)
 chars // what will this be?
 
-"abc def ghi".split(" ")  // what will this be?
-
-
 ary = ["a", "b", "c"]
-for(var i of ary) console.log(i)      // what will be printed?
-for(var i of ary) console.log(ary[i]) // what will be printed?
+for(let i of ary) console.log(i)      // what will be printed?
 
-var name
-var obj = {"a": 1, "b": 2, "c": 3}
+let name
+let obj = {"a": 1, "b": 2, "c": 3}
 for(name in obj) console.log(name)      // what will be printed?
 for(name in obj) console.log(obj[name]) // what will be printed?
 
@@ -99,6 +95,19 @@ for(name in obj) console.log(obj[name]) // what will be printed?
 ["a", "bc", "d", "ef"].filter((str) => str.length === 1) // what will be printed?
 "a bc d ef".split(" ")                                   // what will be printed?
 "a bc d ef".split(" ").filter((str) => str.length === 2) // what will be printed?
+
+
+let users = [
+  {name: "Josh",  age: 33},
+  {name: "Jan",   age: 38},
+  {name: "Carla", age: 82},
+  {name: "Mei",   age: 14},
+]
+
+// what will each of these be?
+users.map((user) => user.name)
+users.map((user) => user.name).map((name) => name.length)
+users.map((user) => user.name).filter((name) => name[0] === "J").map((name) => name.length)
 ```
 
 How to play with API data
