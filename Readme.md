@@ -16,32 +16,6 @@ Install `jq`
 $ brew install jq
 ```
 
-[These](https://api.github.com/users/stevekinney/events/public)
-are Steve Kinney's public github events, try them out, and then try finding your own.
-
-```sh
-$ curl 'https://api.github.com/users/stevekinney/events/public'
-$ curl 'https://api.github.com/users/stevekinney/events/public' | jq .
-```
-
-Quick aside: [These](https://github.com/stevekinney.keys) are Steve Kinney's public keys,
-see how you can see them? That's why they're public, everyone has your public keys,
-but only you have your private keys.
-
-```sh
-$ cat ~/.ssh/id_rsa.pub
-ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDdrL6VqkfrR222anFfHeibV9giF6JinYadCWZAgKH85J4SdJ+YopVbw4bB1MSKuu0+GomN7xyEcG13Fd9a9nlIkPkxoLFJC7tDA6gH6aRmoNX+pRwgX5nu2EA09PCgRQfnX+AXivYi5eDU3s0Sp8qLi/lTEouN/sJKDC1OOHAXOj46HxBk5NyoDBVINSpvGBjvhVJURRd0YOVZdi1Oe8A9fuTLWB8aT/xFucP62EN4YFq5wzSrj//xrVo3dJXCMssNaPBL2p2I32dlXMmGWdtlFHnLQsyEZrSg7jCPOBMEJ9aAHigl/cj77sdc7vtBFz3clb6x5c6zhmYGZgESfzr9 josh.cheek@gmail.com
-
-$ curl https://github.com/JoshCheek.keys | head -1
-ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDdrL6VqkfrR222anFfHeibV9giF6JinYadCWZAgKH85J4SdJ+YopVbw4bB1MSKuu0+GomN7xyEcG13Fd9a9nlIkPkxoLFJC7tDA6gH6aRmoNX+pRwgX5nu2EA09PCgRQfnX+AXivYi5eDU3s0Sp8qLi/lTEouN/sJKDC1OOHAXOj46HxBk5NyoDBVINSpvGBjvhVJURRd0YOVZdi1Oe8A9fuTLWB8aT/xFucP62EN4YFq5wzSrj//xrVo3dJXCMssNaPBL2p2I32dlXMmGWdtlFHnLQsyEZrSg7jCPOBMEJ9aAHigl/cj77sdc7vtBFz3clb6x5c6zhmYGZgESfzr9
-```
-
-```sh
-$ curl 'https://api.datamuse.com/words?rel_rhy=turing'                             > words-that-rhyme-with-turing.json
-$ curl 'http://api.zippopotam.us/us/80202'                                         > denver-info.json
-$ curl 'http://maps.googleapis.com/maps/api/geocode/json?latlng=39.7491,-104.9946' > denverish-locations.json
-```
-
 Some vague semblence of a plan
 ------------------------------
 
@@ -120,6 +94,11 @@ for(name in obj) console.log(obj[name]) // what will be printed?
 ary = ["a", "b", "c"]
 for(name in obj) console.log(name)      // what will be printed?
 for(name in obj) console.log(obj[name]) // what will be printed?
+
+["a", "bc", "d", "ef"].filter((str) => str.length === 2) // what will be printed?
+["a", "bc", "d", "ef"].filter((str) => str.length === 1) // what will be printed?
+"a bc d ef".split(" ")                                   // what will be printed?
+"a bc d ef".split(" ").filter((str) => str.length === 2) // what will be printed?
 ```
 
 How to play with API data
