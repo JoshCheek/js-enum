@@ -214,6 +214,7 @@ Try some shit out
   * Same, but the top 10 words
   * For each of the top 10 most frequently used words in a commit message, they should be a key in an object, with a value that shows how many times they were used
   * Same, but instead of the count, map them to a list of words that rhyme with them
+    You'll need to use this other API to do that: https://api.datamuse.com/words?rel_rhy=turing
   * Grand finale
     * Translate into an html file with their avatar, name, image, link to the commit
   * For each committer, their name is a key in an obj, the value is an array of the times that they committed (get it off the push event)
